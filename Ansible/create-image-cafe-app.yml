@@ -1,0 +1,21 @@
+- hosts: ansible
+  tasks:
+    - name: clone repository
+      git:
+        repo: https://github.com/Omar-Abdelwahabb1/cafe-app
+  # Replace with your actual repo
+        dest: /opt/docker/cafe-app
+        clone: yes
+        update: yes
+
+    - name: create docker image
+      command: docker build -t omarabdelwahab1/cafe-app:latest /opt/docker/cafe-app
+      args:
+        chdir: /opt/docker/
+
+    - name: log in to Docker Hub
+      command: docker login -u omarabdelwahab1 -p omarahmed.81204  # Temporarily removing no_log to see errors
+
+    - name: push Docker image to Docker Hub
+      command: docker push omarabdelwahab1/cafe-app:latest
+
