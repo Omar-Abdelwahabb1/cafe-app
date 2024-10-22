@@ -9,9 +9,3 @@ Docker: Containerization platform for deploying applications in lightweight cont
 GitHub: Source control platform used to store the application's code. 
 Git: source version control system.
 
-Design:
-![design](https://github.com/user-attachments/assets/fb0f7ec2-eb60-447a-ad94-3f1ece571b3f)
-
-Demo:
- ![Picture1](https://github.com/user-attachments/assets/c73a2348-732c-4cfa-88c7-8f559e22aa8a)
-
